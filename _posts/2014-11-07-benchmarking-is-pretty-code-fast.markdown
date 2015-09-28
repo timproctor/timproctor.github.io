@@ -36,7 +36,7 @@ end
 ```
 #### Results
 
-![iteration_5]({{ site.url }}/assets/images/iteration_5.jpg)
+![iteration_5]({{ site.url }}/assets/images/iteration_5.png)
 
 Average of the 4 real times (the last column of data) = 0.00805325 seconds
 
