@@ -34,13 +34,13 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 ```
-#### Results
+#### Results ###
 
 ![iteration_5]({{ site.url }}/assets/images/iteration_5.png)
 
 Average of the 4 real times (the last column of data) = 0.00805325 seconds
 
-### Testing Iteration 4:
+### Testing Iteration 4: ###
 
 ```ruby
 require 'benchmark'
@@ -63,13 +63,13 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 ```
-#### Results
+#### Results ####
 
-![iteration_4](./images/iteration_4.png)
+![iteration_4]({{ site.url }}/assets/images/iteration_4.png)
 
 Average of the 4 real times (the last column of data) = 0.007983 seconds
 
-### Testing Iteration 1:
+### Testing Iteration 1: ####
 
 ```ruby
 require 'benchmark'
@@ -104,13 +104,13 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 ```
-#### Results
+#### Results ####
 
-![iteration_1](./images/iteration_1.png)
+![iteration_1]({{ site.url }}/assets/images/iteration_1.png)
 
 Average of the 4 real times (the last column of data) = 0.0032615 seconds
 
-### Testing Iteration 2:
+### Testing Iteration 2: ###
 
 ```ruby
 require 'benchmark'
@@ -180,11 +180,11 @@ end
 ```
 #### Results
 
-![iteration_2](./images/iteration_2.png)
+![iteration_2]({{ site.url }}/assets/images/iteration_2.png)
 
 Average of the 4 real times (the last column of data) = 0.015414 seconds
 
-### Testing Iteration 6:
+### Testing Iteration 6: ###
 ```ruby
 require 'benchmark'
 
@@ -222,13 +222,14 @@ Benchmark.bm do |x|
 end
 
 ```
-#### Results
+#### Results ###
 
-![iteration_6](./images/iteration_6.png)
+![iteration_6]({{ site.url }}/assets/images/iteration_6.png)
 
 Average of the 4 real times (the last column of data) = 0.01015875 seconds
 
-### Testing Iteration 7:
+### Testing Iteration 7: ##
+
 ```ruby
 require 'benchmark'
 
@@ -254,13 +255,13 @@ Benchmark.bm do |x|
 end
 
 ```
-#### Results
+#### Results ####
 
-![iteration_7](./images/iteration_7.png)
+![iteration_7]({{ site.url }}/assets/images/iteration_7.png)
 
 Average of the 4 real times (the last column of data) = 0.0182455 seconds
 
-### Conclusions
+### Conclusions ###
 
 I feel like I should have done the experiments based on a much larger number of repeats, like 80,000
 versus 8,000 times. If I make conclusions on these results, it looks like pretty code doesn't
