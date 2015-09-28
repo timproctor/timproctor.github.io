@@ -68,6 +68,7 @@ some kick-ass stuff going on under the hood.
 and need to work on other stuff...
 
 ### Next up...what are threads? what is low-pause generational garbage collection?
+
 ### What is a LLVM-based just-in-time (JIT) native machine code compiler?
 
 ### till next time
