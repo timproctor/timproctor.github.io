@@ -10,7 +10,7 @@ categories: advanced-beginner programmer
 
 # The purpose of today's blog is to explore Rubinius. What is Rubinius?
 
-### What is Rubinius?
+### What is Rubinius? ###
 
 The following is what Rubinius says about itself: An implementation of Ruby
 
@@ -30,7 +30,10 @@ to monitor compatibility with Matz's Ruby Implementation (MRI). Rubinius
 
 provides a C-API interface for running C-extensions to ease migrating from MRI.
 
-#### ( huh?!? ) Let's unpack this description a bit:
+####
+
+( huh?!? ) Let's unpack this description a bit:
+####
 
 My understanding of concurrency is that it basically does some task while another task
 might still be working. Normally, Ruby is not so good at concurrency. Concurrency
@@ -67,8 +70,12 @@ some kick-ass stuff going on under the hood.
 ...ok, well I'm going to turn this into a multi-part because I'm getting bored
 and need to work on other stuff...
 
-### Next up...what are threads? what is low-pause generational garbage collection?
+######
 
-### What is a LLVM-based just-in-time (JIT) native machine code compiler?
+Next up...what are threads? what is low-pause generational garbage collection?
 
-### till next time
+What is a LLVM-based just-in-time (JIT) native machine code compiler?
+
+till next time
+
+######
