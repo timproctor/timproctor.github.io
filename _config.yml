@@ -1,9 +1,10 @@
 # Site settings
-title: Relatable to Programming
+title: Tim Proctor
 email: timandcamiproctor@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Programming tidbits I want to comment on, write about, or just
-  remember for future me.
+  I'm on path to becoming a coding ninja and here are some things
+  I've learned, want to learn, have thought about, or have someting
+  to say on the subject.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://timproctor.github.io" # the base hostname & protocol for your site
 twitter_username: Timandcami
