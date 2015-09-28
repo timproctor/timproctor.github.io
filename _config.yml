@@ -11,3 +11,7 @@ github_username:  timproctor
 
 # Build settings
 markdown: kramdown
+
+# kramdown
+kramdown:
+  input: GFM
