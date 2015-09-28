@@ -2,7 +2,6 @@
 layout: post
 title: "Benchmarking: Is Pretty Code Fast?"
 date: 2014-11-07 10:28:52 -0700
-comments: true
 categories: testing ruby advanced-beginnger refactoring
 ---
 
@@ -34,6 +33,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 ```
+
 #### Results ###
 
 ![iteration_5]({{ site.url }}/assets/images/iteration_5.png)
@@ -255,6 +255,7 @@ Benchmark.bm do |x|
 end
 
 ```
+
 #### Results ####
 
 ![iteration_7]({{ site.url }}/assets/images/iteration_7.png)

@@ -2,10 +2,7 @@
 layout: post
 title: "Why I care to find out more about Rubinius"
 date: 2014-10-03 13:40:46 -0600
-comments: true
-categories: advanced-beginner programmer
-            ruby
-            rubinius
+categories: advanced-beginner programmer ruby rubinius
 ---
 
 # The purpose of today's blog is to explore Rubinius. What is Rubinius?

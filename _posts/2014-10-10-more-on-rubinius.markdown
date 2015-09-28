@@ -2,7 +2,6 @@
 layout: post
 title: "more on Rubinius"
 date: 2014-10-10 16:32:16 -0600
-comments: true
 categories: ruby rubinius
 ---
 ### ...what are threads?

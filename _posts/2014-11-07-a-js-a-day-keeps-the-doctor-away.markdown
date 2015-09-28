@@ -2,7 +2,6 @@
 layout: post
 title: "JS a day keeps the doctor away"
 date: 2014-11-07 09:08:09 -0700
-comments: true
 categories: javascript language
 ---
 # Baby Steps To JavaScript
