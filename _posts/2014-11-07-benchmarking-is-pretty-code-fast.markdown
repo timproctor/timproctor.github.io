@@ -63,6 +63,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 ```
+
 #### Results ####
 
 ![iteration_4]({{ site.url }}/assets/images/iteration_4.png)
@@ -104,6 +105,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 ```
+
 #### Results ####
 
 ![iteration_1]({{ site.url }}/assets/images/iteration_1.png)
@@ -178,6 +180,7 @@ Benchmark.bm do |x|
 end
 
 ```
+
 #### Results
 
 ![iteration_2]({{ site.url }}/assets/images/iteration_2.png)
@@ -185,6 +188,7 @@ end
 Average of the 4 real times (the last column of data) = 0.015414 seconds
 
 ### Testing Iteration 6: ###
+
 ```ruby
 require 'benchmark'
 
@@ -222,6 +226,7 @@ Benchmark.bm do |x|
 end
 
 ```
+
 #### Results ###
 
 ![iteration_6]({{ site.url }}/assets/images/iteration_6.png)
