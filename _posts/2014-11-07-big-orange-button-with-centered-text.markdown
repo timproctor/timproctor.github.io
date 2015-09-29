@@ -5,7 +5,7 @@ date: 2014-11-07 09:46:32 -0700
 categories: css mobile
 ---
 
-## CSS For a Big Orange Button 
+## CSS For a Big Orange Button ##
 
 ```css
 .new_trip_btn {
@@ -22,8 +22,7 @@ categories: css mobile
 }
 ```
 
-## Title Inside Button
-
+## Title Inside Button ##
 
 ```css
 .new_trip_btn .title {
