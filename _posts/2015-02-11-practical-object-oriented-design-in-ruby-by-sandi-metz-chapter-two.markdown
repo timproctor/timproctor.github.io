@@ -2,27 +2,19 @@
 layout: post
 title: "Practical Object-Oriented Design in Ruby by Sandi Metz (Chapter Two)"
 date: 2015-02-11 08:34:35 -0700
-comments: true
 categories: advanced-beginners, competent, ruby, rails
 ---
+
 ## Book-Review: Chapter Two (Designing Classes with a Single Responsibility)
 
 ###### DISCLAIMER/Acknowledement:
+
 If there are any sentences or phrases that make a lot of sense to you then it was
 most likely copied word for word from Sandi's book. She continues to inspire.
 
-#### Purpose:
-To have the highest success at learning anything, the experts agree that one should
-teach the intended content as opposed to applying a study technique.
-
-For example, the Pythagorean Theorem is better retained by teaching it to a co-worker versus
-making a `(a * a) + (b * b) == c * c` flash-card.
-
-The purpose of this blog is to learn as much as possible from Sandi Metz's
-amazing book, *Practical Object-Oriented Design in Ruby* by teaching it to you, the
-reader.
 
 ### Chapter Gist
+
 >  - The path to changeable and maintainable object-oriented software begins with classes
 that have a single responsibility
 >  - Refactoring a class so that all of its methods have a single responsibility has a clarifying
@@ -34,6 +26,7 @@ methods in turn
 >  - Small methods lower the barriers to improving your design
 
 ### Some specific steps
+
 >  - Test your class and methods:
       >  - If the simplest description you can devise uses the word "and", the class
       likely has more than one responsibility
