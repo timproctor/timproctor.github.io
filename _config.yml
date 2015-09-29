@@ -4,7 +4,7 @@ email: timandcamiproctor@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Follow me as we become coding ninjas. Here are some things
   I've learned, want to learn, have thought about, or want to
-  to comment on the subject of.
+  comment on the subject of.
 # baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://timproctor.github.io" # the base hostname & protocol for your site
 twitter_username: Timandcami
