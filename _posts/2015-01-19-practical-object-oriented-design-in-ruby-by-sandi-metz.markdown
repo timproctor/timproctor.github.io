@@ -2,25 +2,15 @@
 layout: post
 title: Practical Object-Oriented Design in Ruby by Sandi Metz
 date: 2015-01-19 15:23:25 -0700
-comments: true
 categories: advanced-beginners, competent, ruby, rails
 ---
-## Book-Review: Chapter One (Object-Oriented Design)
+
+## Book-Review: Chapter One (Object-Oriented Design) ##
 
 ###### DISCLAIMER/Acknowledement:
+
 If there are any sentences or phrases that make a lot of sense to you then it was
 most likely copied word for word from Sandi's book. She continues to inspire.
-
-#### Purpose:
-To have the highest success at learning anything, the experts agree that one should
-teach the intended content as opposed to applying a study technique.
-
-For example, the Pythagorean Theorem is better retained by teaching it to a co-worker versus
-making a `(a * a) + (b * b) == c * c` flash-card.
-
-The purpose of this blog is to learn as much as possible from Sandi Metz's
-amazing book, *Practical Object-Oriented Design in Ruby* by teaching it to you, the
-reader.
 
 ### Chapter One (Object-Oriented Design)
 
@@ -69,7 +59,7 @@ attribute names but each contains its own personal data
 >   - as a sculptor has chisels and files, an object-oriented designer has *principles*
 and *patterns*
 
-###### some *principles* are:
+###### some *principles* are: ######
 
 >   - SOLID: **S**ingle Responsibility, **O**pen-Closed, **L**iskov Substitution, **I**nterface Segregation, and
 **D**ependency Inversion
@@ -78,7 +68,7 @@ and *patterns*
 
 >   - LoD: **L**aw **o**f **D**emeter
 
-###### some *patterns* are:
+###### some *patterns* are:  ######
 
 >   - 1994 - (Gof), Erich Gamma, Richard Helm, Ralph Johnson, Jon Vlissides wrote *Design Patterns*
 
