@@ -186,7 +186,7 @@ Gear.new(chainring: 52, cog: 11, wheel: Wheel.new(26, 1.5)).gear_inches
 
 The above example removes every dependency on argument order. *Gear* is now free to add or remove initialization arguments and defaults, and any change will have zero side effects in other code.
 
-To add defaults, the example below shows how to add non-boolean defaults and boolean defaults using the || method:
+To add defaults, the example below shows how to add non-boolean defaults and boolean defaults using the `` || `` method:
 
 ```ruby
 def initialize(args)
@@ -199,7 +199,7 @@ def initialize(args)
 end
 ```
 
-In the example below, setting the defaults in this way means that callers can actually cause *@chainring* to get set to *false* or *nil*, something that is not possible when using the || technique.
+In the example below, setting the defaults in this way means that callers can actually cause *@chainring* to get set to *false* or *nil*, something that is not possible when using the `` || ``      technique.
 
 ```ruby
 # specifying defaults using fetch
