@@ -28,9 +28,9 @@ methods in turn
 ### Some specific steps
 
 >  - Test your class and methods:
-      >  - If the simplest description you can devise uses the word "and", the class
-      likely has more than one responsibility
-      >  - If it uses the word "or," then the class has more than one responsibility and
+>    - If the simplest description you can devise uses the word "and", the class
+likely has more than one responsibility
+>    - If it uses the word "or," then the class has more than one responsibility and
       aren't even very related
 >  - Behavior is captured in methods and invoked by sending messages so always wrap
 instance variables in accessor methods instead of directly referring to variables
@@ -47,6 +47,7 @@ class Gear
   end
 end
 ```
+
 Using `attr_reader` caused Ruby to create simple wrapper methods
 for the variables
 
@@ -66,11 +67,14 @@ end
 >  - Methods, like classes, should have a single responsibility
 
 Look at the diameters method of the class below
+
 ```ruby
+
 def diameters
   wheels.collect {|wheel| wheel.rim + (wheel.tire * 2)}
 end
 ```
+
 The method clearly has two responsibilities: it iterates over the wheels and it calculates the diameter of each wheel.
 Here is a possible refactor that splits these two responsibilities into just one method a piece:
 
