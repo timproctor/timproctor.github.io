@@ -2,10 +2,10 @@
 layout: post
 title: "Big Orange Button With Centered Text"
 date: 2014-11-07 09:46:32 -0700
-comments: true
 categories: css mobile
 ---
-## CSS For a Big Orange Button For Mobile
+
+## CSS For a Big Orange Button 
 
 ```css
 .new_trip_btn {
@@ -21,7 +21,9 @@ categories: css mobile
   margin-top: 360px;
 }
 ```
+
 ## Title Inside Button
+
 
 ```css
 .new_trip_btn .title {
