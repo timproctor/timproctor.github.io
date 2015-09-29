@@ -151,7 +151,7 @@ def diameter
 end
 ```
 
-#### Remove Argument-Order Dependencies
+#### Remove Argument-Order Dependencies ###
 
 In the example below, *Gear's initialize* method takes three arguments: *chainring*, *cog*, and *wheel*. It provides no defaults; each of these arguments is required. When a new instance of *Gear* is created, the three arguments must be passed and they must be passed in the exact order.
 
@@ -226,3 +226,91 @@ def defaults
 end
 ```
 This isolation technique above is useful when defaults are more complicated than numbers or strings.
+
+Imagine next that *Gear* is part of a framework and that its initialization method requires fixed-order arguments. Imagine also that your code has many places where you must create a new instance of *Gear*. *Gear's initailize* method is *external* to your application; it is part of an external interface over which you have no control. As the example below shows, *GearWrapper* allows your application to create a new instance of *Gear* using an options hash.
+
+```ruby
+module SomeFramework
+  class Gear
+    attr_reader :chainring, :cog, :wheel
+    def initialize(chainring, cog, wheel)
+      @chainring = chainring
+      @cog       = cog
+      @wheel     = wheel
+    end
+# . . .
+  end
+end
+
+# wrap the interface to protect yourself from changes
+module GearWrapper
+  def self.gear(args)
+    SomeFramework::Gear.new(args[:chainring],
+                            args[:cog],
+                            args[:wheel])
+  end
+end
+
+# Now you can create a new Gear using an arguments hash.
+GearWrapper.gear(chainring: 52, cog: 11, wheel: Wheel.new(26, 1.5)).gear_inches
+```
+
+#### Managing Dependency Direction ###
+
+In the first example *Gear* depended on *Wheel* and now in the next example below *Wheel* depends on *Gear* or *ratio*. The next lesson examines how choosing dependency direction can mean the difference between a pleasing code-base and one that is harder and harder to change.
+
+```ruby
+class Gear
+  attr_reader :chainring, :cog
+  def initailize(chainring, cog)
+    @chainring = chainring
+    @cog       = cog
+  end
+
+  def gear_inches(diameter)
+    raito * diameter
+  end
+
+  def ratio
+    chainring / cog.to_f
+  end
+
+# . . .
+end
+
+class Wheel
+  attr_reader :rim, :tire, :gear
+  def initialize(rim, tire, chainring, cog)
+    @rim  = rim
+    @tire = tire
+    @gear = Gear.new(chainring, cog)
+  end
+
+  def diameter
+    rim + (tire * 2)
+  end
+
+  def gear_inches
+    gear.gear_inches(diameter)
+  end
+# . . .
+end
+
+Wheel.new(26, 1.5, 52, 11).gear_inches
+```
+
+##### How to choose Dependency Direction
+
+Pretend for a moment that your classes are people. If you were to give them advice about how to behave you would tell them to *depend on things that change less often than you do.* This is based on the following simple truths about code:
+
+>  - Some classes are more likely than others to have changes in requirements.
+>  - Concrete classes are more likely to change than abstract classes.
+>  - Changing a class that has many dependents will result in widespread consequences.
+
+An example of an abstract class is when you inject *Wheel* into *Gear* such that *Gear* then depends on a *Duck* who responds to *diameter*, you are, however casually, defining an interface. This interface is an abstraction of the idea that a certain category of things will have a diameter. The abstraction was harvested from a concrete class; and depending on the abstraction is always safer than depending on a concretion because by its very nature, the abstraction is more stable.
+
+#### Summary ###
+
+Dependency management is core to creating future-proof applications. Injecting dependencies creates loosely coupled objects that can be reused in novel ways. Isolating dependencies allows objects to quickly adapt to unexpected changes. Depending on abstractions decreases the likelihood of facing these changes.
+
+The key to managing dependencies is to control their direction.
