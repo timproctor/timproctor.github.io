@@ -76,8 +76,7 @@ end
 
 Gear.new(52, 11, Wheel.new(26, 1.5)).gear_inches  
 ```
-In the above, *Gear* does not know about Wheel.new and this is called **dependency injection**. *Gear* previously had explicit
-dependencies on the *Wheel* class and on the type and order of its initialization arguments, but through injection these dependencies have been reduced to a single dependency on the *diameter* method. *Gear* is now smarter because it knows less.
+In the above, *Gear* does not know about Wheel.new and this is called **dependency injection**. *Gear* previously had explicit dependencies on the *Wheel* class and on the type and order of its initialization arguments, but through injection these dependencies have been reduced to a single dependency on the *diameter* method. *Gear* is now smarter because it knows less.
 
 Isolate the creation of a new *Wheel* inside the *Gear* class. The intent is to explicitly expose the dependency while reducing its reach into your class. The example below moves the new instance of *Wheel* from the *Gear's gear_inches* method to *Gear's* initialization method. Notice that this technique unconditionally creates a new *Wheel* each time a new *Gear* is created.
 
