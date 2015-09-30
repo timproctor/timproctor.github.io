@@ -7,7 +7,7 @@ categories: css mobile
 
 ## CSS For a Big Orange Button ##
 
-```css
+{% highlight css %}
 .new_trip_btn {
   font-size: 8rem;
   color: white;
@@ -20,11 +20,11 @@ categories: css mobile
   margin-right: auto;
   margin-top: 360px;
 }
-```
+{% endhighlight %}
 
 ## Title Inside Button ##
 
-```css
+{% highlight css %}
 .new_trip_btn .title {
   text-align: center;
   max-width: 500px;
@@ -32,4 +32,4 @@ categories: css mobile
   margin-right: auto;
   padding-top: 180px;
 }
-```
+{% endhighlight %}

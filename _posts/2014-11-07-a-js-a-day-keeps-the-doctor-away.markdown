@@ -27,7 +27,7 @@ So, don't tell Ruby that I've been giving myself headaches while trying to learn
 example that I copied. Yes, copied. I'm not even to the point where I can write JS on my own
 without help. I'm just reading and copying it for now.
 
-```javascript
+{% highlight javascript %}
 var firstList  = ["a", "b", "c", "d", "e", "f"];
 var secondList = [ "c", "e", "f"];
 
@@ -38,4 +38,4 @@ function remove_elements(arg1, arg2) {
   consolelog(arg1);
 }
 remove_elements(firstList, secondList);
-```
+{% endhighlight %}

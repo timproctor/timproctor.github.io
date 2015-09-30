@@ -12,7 +12,7 @@ Below, is a bunch of my Raindrops code that I wanted to benchmark to see if the 
 ### Testing Iteration 5:
 
 
-```ruby
+{% highlight ruby %}
 require 'benchmark'
 
 class Raindrops
@@ -32,7 +32,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
   x.report { 8000.times { Raindrops.convert (105)} }
 end
-```
+{% endhighlight %}
 
 #### Results ###
 
@@ -42,7 +42,7 @@ Average of the 4 real times (the last column of data) = 0.00805325 seconds
 
 ### Testing Iteration 4: ###
 
-```ruby
+{% highlight ruby %}
 require 'benchmark'
 
 class Raindrops
@@ -62,7 +62,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
   x.report { 8000.times { Raindrops.convert (105)} }
 end
-```
+{% endhighlight %}
 
 #### Results ####
 
@@ -72,7 +72,7 @@ Average of the 4 real times (the last column of data) = 0.007983 seconds
 
 ### Testing Iteration 1: ####
 
-```ruby
+{% highlight ruby %}
 require 'benchmark'
 
 class Raindrops
@@ -104,7 +104,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
   x.report { 8000.times { Raindrops.convert (105)} }
 end
-```
+{% endhighlight %}
 
 #### Results ####
 
@@ -114,7 +114,7 @@ Average of the 4 real times (the last column of data) = 0.0032615 seconds
 
 ### Testing Iteration 2: ###
 
-```ruby
+{% highlight ruby %}
 require 'benchmark'
 
 class Raindrops
@@ -179,7 +179,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 
-```
+{% endhighlight %}
 
 #### Results
 
@@ -189,7 +189,7 @@ Average of the 4 real times (the last column of data) = 0.015414 seconds
 
 ### Testing Iteration 6: ###
 
-```ruby
+{% highlight ruby %}
 require 'benchmark'
 
 
@@ -225,7 +225,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 
-```
+{% endhighlight %}
 
 #### Results ###
 
@@ -235,7 +235,7 @@ Average of the 4 real times (the last column of data) = 0.01015875 seconds
 
 ### Testing Iteration 7: ##
 
-```ruby
+{% highlight ruby %}
 require 'benchmark'
 
 class Raindrops
@@ -259,7 +259,7 @@ Benchmark.bm do |x|
   x.report { 8000.times { Raindrops.convert (105)} }
 end
 
-```
+{% endhighlight %}
 
 #### Results ####
 
