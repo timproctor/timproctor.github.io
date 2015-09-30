@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "POODR by Sandi Metz Chapter Three"
-date: 2015-30-09 12:57:12 -0600
+date: 2015-09-30 12:57:12 -0600
 categories: ruby rails
 ---
 
