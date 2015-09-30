@@ -21,3 +21,15 @@ The word **interface** is used to refer to the kind of interface that is within 
 ![uml-#1]({{ site.url}}/assets/images/chapter4_1.png)
 
 This transition from class-based design to message-based design is a turning point in your design career. The message-based perspective yields more flexible applications than does the class-based perspective. Changing the fundamental design question from "I know I need this class, what should it do?" to "I need to send this message, who should respond to it?" is the first step in that direction. In the above example it is reasonable for **Customer** to send a *suitable_trips* message but **Trip** probably should not be receiving the message.
+
+In the example below, Customer knows that: 1. He wants a list of trips. 2. There's an object that implements the *suitable_trips* message. 3. Part of finding a suitable trip means finding a *suitable_bicycle* message.
+
+![uml-#2]({{ site.url }}/assets/images/chapter4_2.png)
+
+The problem is that **Customer** not only knows *what* he wants, he also knows *how* other objects should collaborate to provide it. The **Customer** class has become the owner of the application rules that assess trip suitability.
+
+#### Asking for "What" Instead of Telling "How" ####
+
+The distinction between a message that asks for what the sender wants and a message that tells the receiver how to behave may seem subtle but the consequences are significant. Understanding the difference is a key part of creating reusable classes with will-defined public interfaces.
+
+We will use a new use case to illustrate the "what" versus "how": A trip, in order to start, needs to ensure that all its bicycles are mechanically sound. **Trip** could know exactly how to make a bike ready for a trip and could ask a **Mechanic** to do each of those things as illustrated in the next example.
