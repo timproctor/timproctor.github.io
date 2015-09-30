@@ -49,12 +49,13 @@ error at number = 8721.
 
 Now, the same method using a functional language like Elixir:
 
-```elixir
+{% highlight elixir %}
 defmodule Factorial do
   def fact(0), do: 1
   def fact(number), do: number * fact( number - 1 )
 end
-```
+{% endhighlight %}
+
 Using IEX, which is the Elixir version of IRB, I was able to quickly find
 the factorial of 20,000. I waited two minutes, but was able to go up to the
 factorial of 150,000.
