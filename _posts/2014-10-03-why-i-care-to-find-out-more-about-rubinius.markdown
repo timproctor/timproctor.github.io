@@ -35,7 +35,6 @@ is best for a functional language that uses recursion. Ruby sucks at recursion a
 have an example to prove it:
 
 {% highlight ruby %}
-```ruby
 def factorial(number)
   if number <= 1
     return 1
@@ -43,7 +42,6 @@ def factorial(number)
     return number * factorial(number - 1)
   end
 end
-```
 {% endhighlight %}
 
 I used IRB in my terminal to run this Ruby method and got a "stack-level-too-deep"
