@@ -6,7 +6,7 @@ categories: front-end making-forms code
 ---
 
 {% highlight HTML %}
-<%= form_for /@mentor, :html => {multipart: true, class: "form-horizontal"} do |f| %>
+<%= form_for mentor, :html => {multipart: true, class: "form-horizontal"} do |f| %>
   <div>
     <div class="form-group">
       <div class="col-md-6 col-md-offset-3">
