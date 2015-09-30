@@ -2,7 +2,7 @@
 layout: post
 title: "POODR by Sandi Metz Chapter Three"
 date: 2015-03-27 13:39:12 -0600
-categories:
+categories: ruby rails
 ---
 
 ## Book-Review: Chapter Three (Managing Dependencies)
@@ -11,6 +11,8 @@ categories:
 
 If there are any sentences or phrases that make a lot of sense to you then it was
 most likely copied word for word from Sandi's book. She continues to inspire.
+
+### Understanding Dependencies ###
 
 Here is a couple of classes that will get refactored with each lesson:
 

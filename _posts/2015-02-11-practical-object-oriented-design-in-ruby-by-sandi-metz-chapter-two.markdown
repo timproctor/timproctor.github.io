@@ -2,7 +2,7 @@
 layout: post
 title: "Practical Object-Oriented Design in Ruby by Sandi Metz (Chapter Two)"
 date: 2015-02-11 08:34:35 -0700
-categories: advanced-beginners, competent, ruby, rails
+categories: ruby rails
 ---
 
 ## Book-Review: Chapter Two (Designing Classes with a Single Responsibility)
