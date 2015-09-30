@@ -34,6 +34,7 @@ might still be working. Normally, Ruby is not so good at concurrency. Concurrenc
 is best for a functional language that uses recursion. Ruby sucks at recursion and I
 have an example to prove it:
 
+{% highlight ruby %}
 ```ruby
 def factorial(number)
   if number <= 1
@@ -43,6 +44,8 @@ def factorial(number)
   end
 end
 ```
+{% endhighlight %}
+
 I used IRB in my terminal to run this Ruby method and got a "stack-level-too-deep"
 error at number = 8721.
 
