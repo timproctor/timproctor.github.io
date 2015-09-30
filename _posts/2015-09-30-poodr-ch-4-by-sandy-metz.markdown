@@ -33,3 +33,19 @@ The problem is that **Customer** not only knows *what* he wants, he also knows *
 The distinction between a message that asks for what the sender wants and a message that tells the receiver how to behave may seem subtle but the consequences are significant. Understanding the difference is a key part of creating reusable classes with will-defined public interfaces.
 
 We will use a new use case to illustrate the "what" versus "how": A trip, in order to start, needs to ensure that all its bicycles are mechanically sound. **Trip** could know exactly how to make a bike ready for a trip and could ask a **Mechanic** to do each of those things as illustrated in the next example.
+
+![uml-#3]({{ site.url }}/assets/images/chapter4_3.png)
+
+A *Trip* tells a *Mechanic* how to prepare a *Bicycle*, almost as if *Trip* were the main program and *Mechanic* a bunch of callable functions. In this design, *Trip* is the only object that knows exactly how to prepare a bike; getting a bike prepared requires using a *Trip* or duplicating the code. *Trip's* context is large, as is *Mechanic's* public interface. These two classes are not islands with bridges between them, they are instead a single, woven cloth.
+
+Here is an alternative where *Trip* asks *Mechanic* to prepare each *Bicyle*, leaving the implementation details to *Mechanic*.
+
+![uml-#4]({{ site.url }}/assets/images/chapter4_4.png)
+
+This example is more object-oriented. Here, a *Trip* asks a *Mechanic* to prepare a *Bicycle*. *Trip's* context is reduced, and *Mechanic's* public interface is smaller. Additionally, *Mechanic's* public interface is now something that any object may profitably use; you don't need a *Trip* to prepare a bike. These objects now communicate in a few well-defined ways; they are less coupled and more easily reusable.
+
+The next example illustrates a third alternative sequence diagram for *Trip* preparation. *Trip* tells *Mechanic* what it wants, that is, to be prepared, and passes itself along as an argument.
+
+![uml-#5]({{ site.url }}/assets/images/chapter4_5.png)
+
+In this example, *Trip* doesn't know or care that it has a *Mechanic* and it doesn't have any idea what the *Mechanic* will do. *Trip* merely holds onto an object which it will send *prepare_trip*; it trusts the receiver of this message to behave appropriately.
