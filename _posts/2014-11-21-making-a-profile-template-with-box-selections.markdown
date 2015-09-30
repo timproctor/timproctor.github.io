@@ -5,7 +5,7 @@ date: 2014-11-21 09:59:51 -0700
 categories: front-end making-forms code
 ---
 
-{% highlight %}
+{% highlight HTML %}
 <%= form_for @mentor, :html => {multipart: true, class: "form-horizontal"} do |f| %>
   <div>
     <div class="form-group">
