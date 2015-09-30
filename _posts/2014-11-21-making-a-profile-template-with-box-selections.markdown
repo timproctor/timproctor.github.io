@@ -10,13 +10,13 @@ categories: front-end making-forms code
   <div>
     <div class="form-group">
       <div class="col-md-6 col-md-offset-3">
-        <%= f.text_field :name, :class => "form-control", :placeholder => "Name &#42;" %>
+        <%= f.text_field :name, :class => "form-control", :placeholder => "Name" %>
       </div>
     </div>
 
     <div class="form-group">
       <div class="col-md-6 col-md-offset-3">
-        <%= f.text_field :email, :class => "form-control", :placeholder => "email@example.com &#42;" %>
+        <%= f.text_field :email, :class => "form-control", :placeholder => "email@example.com" %>
       </div>
     </div>
 
