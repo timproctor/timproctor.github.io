@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Making A Profile Template With Box Selections
+title: "Making A Profile Template With Box Selections"
 date: 2014-11-21 09:59:51 -0700
 categories: front-end making-forms code
 ---
 
-{% highlight ERB %}
+{% highlight HTML %}
 <%= form_for @mentor, :html => {multipart: true, class: "form-horizontal"} do |f| %>
   <div>
     <div class="form-group">
       <div class="col-md-6 col-md-offset-3">
-        <%= f.text_field :name, :class => "form-control", :placeholder => "Name *" %>
+        <%= f.text_field :name, :class => "form-control", :placeholder => "Name &#42;" %>
       </div>
     </div>
 
     <div class="form-group">
       <div class="col-md-6 col-md-offset-3">
-        <%= f.text_field :email, :class => "form-control", :placeholder => "email@example.com *" %>
+        <%= f.text_field :email, :class => "form-control", :placeholder => "email@example.com &#42;" %>
       </div>
     </div>
 
@@ -41,7 +41,7 @@ categories: front-end making-forms code
 
     <div class="form-group">
       <div class="col-md-6 col-md-offset-3">
-        <%= f.label "Best At (select all that apply) *", class: "form-label" %>
+        <%= f.label "Best At (select all that apply) ", class: "form-label" %>
         &nbsp&nbsp
         <%= f.collection_check_boxes(:skills, Skill.all, :id, :name) do |b| %>
         <%= b.check_box %>
