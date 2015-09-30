@@ -5,7 +5,7 @@ date: 2014-11-21 09:59:51 -0700
 categories: front-end making-forms code
 ---
 
-```html
+{% highlight %}
 <%= form_for @mentor, :html => {multipart: true, class: "form-horizontal"} do |f| %>
   <div>
     <div class="form-group">
@@ -57,9 +57,8 @@ categories: front-end making-forms code
     </div>
   </div>
 <% end %>
-```
+{% endhighlight %}
 
-
-## The code above will produce the view below:
+## The code above will produce the view below: ##
 
 ![view]({{ site.url }}/assets/images/form_selectors.png)
