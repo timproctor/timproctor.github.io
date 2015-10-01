@@ -2,7 +2,7 @@
 layout: post
 title: Practical Object-Oriented Design in Ruby by Sandi Metz
 date: 2015-01-19 15:23:25 -0700
-categories: ruby rails
+categories: ruby rails book-review poodr
 ---
 
 ## Book-Review: Chapter One (Object-Oriented Design) ##

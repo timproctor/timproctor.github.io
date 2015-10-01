@@ -2,7 +2,7 @@
 layout: post
 title: "POODR by Sandi Metz Chapter Three"
 date: 2015-03-27 13:39:12 -0600
-categories: ruby rails
+categories: ruby rails book-review poodr
 ---
 
 ## Book-Review: Chapter Three (Managing Dependencies)

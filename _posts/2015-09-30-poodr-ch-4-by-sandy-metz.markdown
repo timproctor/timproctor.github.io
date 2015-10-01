@@ -2,7 +2,7 @@
 layout: post
 title: "POODR by Sandi Metz Chapter Four"
 date: 2015-09-30 12:57:12 -0600
-categories: ruby rails
+categories: ruby rails book-review poodr
 ---
 
 ## Book-Review: Chapter Four (Creating Flexible Interfaces)
