@@ -52,7 +52,7 @@ In this example, *Trip* doesn't know or care that it has a *Mechanic* and it doe
 
 It is reasonable that *Customer* would send the *suitable_trips* message. That message repeats in both sequence diagrams because it feels correct. It is exactly "what" *Customer* wants. The problem is not with the sender, it is with the receiver. We have not yet identified an object whose responsibility it is to implement this method. We need a *TripFinder*, an object that contains all knowledge of what makes a trip suitable. It know the rules; its job is to do whatever is necessary to respond to this message.
 
-![uml-#6]({{ site.url }}/assets/images/hcapter4_6.png)
+![uml-#6]({{ site.url }}/assets/images/chapter4_6.png)
 
 #### Create Explicit Interfaces
 
