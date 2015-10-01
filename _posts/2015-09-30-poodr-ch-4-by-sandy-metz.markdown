@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "POODR by Sandi Metz Chapter Three"
+title: "POODR by Sandi Metz Chapter Four"
 date: 2015-09-30 12:57:12 -0600
 categories: ruby rails
 ---
@@ -62,4 +62,3 @@ The goal is to write code that works today, is reusable, and can be adapted for 
   >  - Be more about "what" than "how"
   >  - Have names that, insofar as you can anticipate, will not change
   >  - Take a hash as an options parameter
-  
