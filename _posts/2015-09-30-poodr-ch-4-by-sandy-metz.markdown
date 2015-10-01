@@ -49,3 +49,17 @@ The next example illustrates a third alternative sequence diagram for *Trip* pre
 ![uml-#5]({{ site.url }}/assets/images/chapter4_5.png)
 
 In this example, *Trip* doesn't know or care that it has a *Mechanic* and it doesn't have any idea what the *Mechanic* will do. *Trip* merely holds onto an object which it will send *prepare_trip*; it trusts the receiver of this message to behave appropriately.
+
+It is reasonable that *Customer* would send the *suitable_trips* message. That message repeats in both sequence diagrams because it feels correct. It is exactly "what" *Customer* wants. The problem is not with the sender, it is with the receiver. We have not yet identified an object whose responsibility it is to implement this method. We need a *TripFinder*, an object that contains all knowledge of what makes a trip suitable. It know the rules; its job is to do whatever is necessary to respond to this message.
+
+![uml-#6]({{ site.url }}/assets/images/hcapter4_6.png)
+
+#### Create Explicit Interfaces
+
+The goal is to write code that works today, is reusable, and can be adapted for unexpected use in the future. Every time you create a class, declare its interfaces. Methods in the "public" interface should
+
+  >  - Be explicitly identified as such
+  >  - Be more about "what" than "how"
+  >  - Have names that, insofar as you can anticipate, will not change
+  >  - Take a hash as an options parameter
+  
