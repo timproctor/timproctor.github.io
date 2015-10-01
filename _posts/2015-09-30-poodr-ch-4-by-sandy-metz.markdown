@@ -50,7 +50,7 @@ The next example illustrates a third alternative sequence diagram for *Trip* pre
 
 In this example, *Trip* doesn't know or care that it has a *Mechanic* and it doesn't have any idea what the *Mechanic* will do. *Trip* merely holds onto an object which it will send *prepare_trip*; it trusts the receiver of this message to behave appropriately.
 
-It is reasonable that *Customer* would send the *suitable_trips* message. That message repeats in both sequence diagrams because it feels correct. It is exactly "what" *Customer* wants. The problem is not with the sender, it is with the receiver. We have not yet identified an object whose responsibility it is to implement this method. We need a *TripFinder*, an object that contains all knowledge of what makes a trip suitable. It know the rules; its job is to do whatever is necessary to respond to this message.
+Back to our original use case: A customer, in order to choose a trip, would like to see a list of available trips of appropriate difficulty, on a specific date, where rental bicycles are available. It is reasonable that *Customer* would send the *suitable_trips* message. That message repeats in both sequence diagrams because it feels correct. It is exactly "what" *Customer* wants. The problem is not with the sender, it is with the receiver. We have not yet identified an object whose responsibility it is to implement this method. We need a *TripFinder*, an object that contains all knowledge of what makes a trip suitable. It know the rules; its job is to do whatever is necessary to respond to this message.
 
 ![uml-#6]({{ site.url }}/assets/images/chapter4_6.png)
 
@@ -62,3 +62,39 @@ The goal is to write code that works today, is reusable, and can be adapted for 
   >  - Be more about "what" than "how"
   >  - Have names that, insofar as you can anticipate, will not change
   >  - Take a hash as an options parameter
+
+Be explicit with which methods are *private* and which ones are *public* to future-you and any other adopters of your legacy.
+
+#### Honor the Public Interfaces of Others
+
+Do your best to interact with other classes using only their public interfaces. The public methods will be more stable than the private ones. A dependency on a private method of an external framework is a form of technical debt. Avoid these dependencies.
+
+### The Law of Demeter
+
+The Law of Demeter (LoD) is a set of coding rules that results in loosely coupled objects. Loose coupling is nearly always a virtue but is just one component of design and must be balanced against competing needs. Some Demeter violations are harmless, but others expose a failure to correctly identify and define public interfaces.
+
+Demeter restricts the set of objects to which a method ay send messages; it prohibits routing a message to a third object via a second object of a different type. Demeter is often paraphrased as "only talk to your immediate neighbors" or "use only one dot." Imagine that Trips *depart* method contains each of the following lines of code:
+  >  - customer.bicycle.wheel.tire
+  >  - customer.bicycle.wheel.rotate
+  >  - hash.keys.sort.join(', ')
+
+Demeter became a "law" because a human being decided so, as a law it's more like "floss your teeth every day," than it is like gravity. Some of the message chains above fail when judged against TRUE:
+
+  >  - If wheel changes tire or rotate, depart may have to change. Trip has nothing to do with wheel yet changes to wheel might force changes in Trip. This unnecessarily raises the cost of change; the code is not reasonable.
+  >  - Changing tire or rotate may break something in depart. Because Trip is distant and apparently unrelated, the failure will be completely unexpected. This code is not transparent.
+  >  - Trip cannot be reused unless it has access to a customer with a bicycle that has a wheel and a tire. It requires a lot of context and is not easily usable.
+  >  - This patter of messages will be replicated by others, producing more code with similar problems. This style of code, unfortunately, breeds itself. It is not exemplary.
+
+The first two messages are basically the same, one retrieves a distant attribute (tire) and the other invokes a distant behavior (rotate). Some would argue that violating Demeter to reach to a distant attribute as long as that attribute is not mutated is not much of a violation. The second violation points to the necessity for refactoring.  Consider what this message chain would look like if you had started out by deciding *what* depart wants from customer instead of *how* it wants it. From a message-based point of view, the answer is:
+
+  > - customer.ride
+
+The ride method of customer hides implementation details from Trip and reduces both its context and its dependencies, significantly improving the design.
+
+The third message chain, `` hash.keys.sort.join `` is perfectly reasonable and, despite the abundance of dots, may not be a Demeter violation at all. Instead of evaluating this phrase by counting the "dots," evaluate it by checking the types of the intermediate objects.
+
+  > - hash.keys returns an Enumerable
+  > - hash.keys.sort also returns an Enumerable
+  > - hash.keys.sort.join returns a String
+
+If we accept that `` hash.keys.sort.join `` actually returns an *Enumerable* of *Strings*, all of the intermediate objects have the same type and there is no Demeter violation. If you remove the dots from this line of code, your costs may well go up instead of down.
