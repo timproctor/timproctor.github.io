@@ -74,6 +74,7 @@ Do your best to interact with other classes using only their public interfaces. 
 The Law of Demeter (LoD) is a set of coding rules that results in loosely coupled objects. Loose coupling is nearly always a virtue but is just one component of design and must be balanced against competing needs. Some Demeter violations are harmless, but others expose a failure to correctly identify and define public interfaces.
 
 Demeter restricts the set of objects to which a method ay send messages; it prohibits routing a message to a third object via a second object of a different type. Demeter is often paraphrased as "only talk to your immediate neighbors" or "use only one dot." Imagine that Trips *depart* method contains each of the following lines of code:
+
   >  - customer.bicycle.wheel.tire
   >  - customer.bicycle.wheel.rotate
   >  - hash.keys.sort.join(', ')
