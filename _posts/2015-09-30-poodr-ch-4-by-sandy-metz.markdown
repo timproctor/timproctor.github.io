@@ -98,4 +98,4 @@ The third message chain, `` hash.keys.sort.join `` is perfectly reasonable and, 
   > - hash.keys.sort also returns an Enumerable
   > - hash.keys.sort.join returns a String
 
-If we accept that `` hash.keys.sort.join `` actually returns an *Enumerable* of *Strings*, all of the intermediate objects have the same type and there is no Demeter violation. If you remove the dots from this line of code, your costs may well go up instead of down.
+If we accept that `` hash.keys.sort.join `` actually returns an *Enumerable* of *Strings*, then all of the intermediate objects have the same type and there is no Demeter violation. If you remove the dots from this line of code, your costs may well go up instead of down.
