@@ -38,7 +38,7 @@ We will use a new use case to illustrate the "what" versus "how": A trip, in ord
 
 A <span class="other-font">Trip</span> tells a <span class="other-font">Mechanic</span> how to prepare a <span class="other-font">Bicycle</span>, almost as if <span class="other-font">Trip</span> were the main program and <span class="other-font">Mechanic</span> a bunch of callable functions. In this design, <span class="other-font">Trip</span> is the only object that knows exactly how to prepare a bike; getting a bike prepared requires using a <span class="other-font">Trip</span> or duplicating the code. <span class="other-font">Trip's</span> context is large, as is <span class="other-font">Mechanic's</span> public interface. These two classes are not islands with bridges between them, they are instead a single, woven cloth.
 
-Here is an alternative where <span class="other-font">Trip</span> asks <span class="other-font">Mechanic</span> to prepare each *Bicyle*, leaving the implementation details to <span class="other-font">Mechanic</span>.
+Here is an alternative where <span class="other-font">Trip</span> asks <span class="other-font">Mechanic</span> to prepare each <span class="other-font>Bicycle</span>, leaving the implementation details to <span class="other-font">Mechanic</span>.
 
 ![uml-#4]({{ site.url }}/assets/images/chapter4_4.png)
 
