@@ -22,7 +22,7 @@ The word **interface** is used to refer to the kind of interface that is within 
 
 This transition from class-based design to message-based design is a turning point in your design career. The message-based perspective yields more flexible applications than does the class-based perspective. Changing the fundamental design question from "I know I need this class, what should it do?" to "I need to send this message, who should respond to it?" is the first step in that direction. In the above example it is reasonable for <span class="other-font">Customer</span> to send a *suitable_trips* message but <span class="other-font">Trip</span> probably should not be receiving the message.
 
-In the example below<span class="other-font">Customer</span>nows that: 1. He wants a list of trips. 2. There's an object that implements the *suitable_trips* message. 3. Part of finding a suitable trip means finding a *suitable_bicycle* message.
+In the example below <span class="other-font">Customer</span> knows that: 1. He wants a list of trips. 2. There's an object that implements the *suitable_trips* message. 3. Part of finding a suitable trip means finding a *suitable_bicycle* message.
 
 ![uml-#2]({{ site.url }}/assets/images/chapter4_2.png)
 
