@@ -7,7 +7,7 @@
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
-$another-font-family: Courier, monospace; 
+$another-font-family: Courier, monospace;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -48,6 +48,7 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "custom",
         "layout",
         "syntax-highlighting"
 ;
