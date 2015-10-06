@@ -128,6 +128,7 @@ def gear_inches
     ratio * wheel.diameter
 end
 {% endhighlight %}
+
 Imagine that calculating *gear_inches* required far more math and that the method looked something like this:
 
 {% highlight ruby %}
@@ -190,8 +191,8 @@ The above example removes every dependency on argument order. <span class="other
 
 To add defaults, the example below shows how to add non-boolean defaults and boolean defaults using the `` || `` method:
 
-{% highlight rub<span class="other-font"> %}
-de</span>f* initialize(args)
+{% highlight ruby %}
+def initialize(args)
   # non-boolean defaults
   @chainring = ar<span class="other-font">s[:chainrin</span>] || 40
   @cog       = args[:cog]       || 18
@@ -226,6 +227,7 @@ def defaults
   { chainring: 40, cog: 18 }
 end
 {% endhighlight %}
+
 This isolation technique above is useful when defaults are more complicated than numbers or strings.
 
 Imagine next that <span class="other-font">Gear</span> is part of a framework and that its initialization method requires fixed-order arguments. Imagine also that your code has many places where you must create a new instance of <span class="other-font">Gear</span>. <span class="other-font">Gear's</span> *initailize* method is *external* to your application; it is part of an external interface over which you have no control. As the example below shows, <span class="other-font">GearWrapper</span> allows your application to create a new instance of <span class="other-font">Gear</span> using an options hash.
