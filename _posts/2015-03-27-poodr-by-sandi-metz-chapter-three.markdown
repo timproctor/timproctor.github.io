@@ -14,7 +14,7 @@ most likely copied word for word from Sandi's book. She continues to inspire.
 
 ### Understanding Dependencies ###
 
-Here is a couple of classes that will get refactored with each lesson:
+Here are a couple of classes that will get refactored throughout this chapter:
 
 {% highlight ruby %}
 class Gear
@@ -54,10 +54,10 @@ Gear.new(52, 11, 26, 1.5).gear_inches
 
 #### Recognizing Dependencies
 
->  - The name of another class. <span class="other-font">Gear</span> expects a class named <span class="other-font">Wheel</span> to exist.
->  - The name of a message that it intends to send to someone other than <span class="other-font">self</span>. <span class="other-font">Gear</span> expects a <span class="other-font">Wheel</span> instance to respond to diameter.
->  - The arguments that a message requires. <span class="other-font">Gear</span> knows that <span class="other-font">Wheel.new</span> requires a <span class="other-font">rim</span> and a <span class="other-font">Tire</span>.
->  - The order of those arguments. <span class="other-font">Gear</span> knows the first argument to <span class="other-font">Wheel.new</span> should be <span class="other-font">rim</span>, the second, <span class="other-font">Tire</span>.
+1. The name of another class. <span class="other-font">Gear</span> expects a class named <span class="other-font">Wheel</span> to exist.
+2. The name of a message that it intends to send to someone other than *self*. <span class="other-font">Gear</span> expects a <span class="other-font">Wheel</span> instance to respond to diameter.
+3. The arguments that a message requires. <span class="other-font">Gear</span> knows that <span class="other-font">Wheel.new</span> requires a *rim* and a *tire*.
+4. The order of those arguments. <span class="other-font">Gear</span> knows the first argument to <span class="other-font">Wheel.new</span> should be *rim*, the second, *tire*.
 
 Instead of being glued to <span class="other-font">Wheel</span>, this next version of <span class="other-font">Gear</span> expects to be initialized with an object that can respond to diameter:
 
@@ -78,7 +78,8 @@ end
 
 Gear.new(52, 11, Wheel.new(26, 1.5)).gear_inches  
 {% endhighlight %}
-In the above, <span class="other-font">Gear</span> does not know about Wheel.new and this is called **dependency injection**. <span class="other-font">Gear</span> previously had explicit dependencies on the <span class="other-font">Wheel</span> class and on the type and order of its initialization arguments, but through injection these dependencies have been reduced to a single dependency on the *diameter* method. <span class="other-font">Gear</span> is now smarter because it knows less.
+
+In the above, <span class="other-font">Gear</span> does not know about <span class="other-font">Wheel.new</span> and this is called **dependency injection**. <span class="other-font">Gear</span> previously had explicit dependencies on the <span class="other-font">Wheel</span> class and on the type and order of its initialization arguments, but through injection these dependencies have been reduced to a single dependency on the *diameter* method. <span class="other-font">Gear</span> is now smarter because it knows less.
 
 Isolate the creation of a new <span class="other-font">Wheel</span> inside the <span class="other-font">Gear</span> class. The intent is to explicitly expose the dependency while reducing its reach into your class. The example below moves the new instance of <span class="other-font">Wheel</span> from the <span class="other-font">Gear's</span> *gear_inches* method to <span class="other-font">Gear's</span> initialization method. Notice that this technique unconditionally creates a new <span class="other-font">Wheel</span> each time a new <span class="other-font">Gear</span> is created.
 
@@ -97,7 +98,7 @@ class Gear
 # . . .  
 {% endhighlight %}
 
-In the next example, creation of a new instance of <span class="other-font">Wheel</span> is deferred until *gear_inches* invokes the new <span class="other-font">wheel</span> method.
+In the next example, creation of a new instance of <span class="other-font">Wheel</span> is deferred until *gear_inches* invokes the new *wheel* method.
 
 {% highlight ruby %}
 class Gear
@@ -119,9 +120,9 @@ class Gear
 # . . .
 {% endhighlight %}
 
-E<span class="other-font">en tho</span>u*gh <span class="other-font">Gear</span> still knows too much because of its <span class="other-font">rim</span> and <span class="other-font">Tire</span> initialization arguments, an improvement is made by publicly exposing <span class="other-font">Gear's</span> dependency on <span class="other-font">Wheel</span>. This change makes the code more agile.
+Even though <span class="other-font">Gear</span> still knows too much because of its *rim* and *tire* initialization arguments, an improvement is made by publicly exposing <span class="other-font">Gear's</span> dependency on <span class="other-font">Wheel</span>. This change makes the code more agile.
 
-Now that you've isolated references to external class names it's time to turn your attention to external *messages*, that is, messages that are sent to someone other than self. For example, the *gear_inches* method below sends *ratio* and <span class="other-font">wheel</span> to self, but sends *diameter* to wheel:
+Now that you've isolated references to external class names it's time to turn your attention to external *messages*, that is, messages that are sent to someone other than self. For example, the *gear_inches* method below sends *ratio* and *wheel* to self, but sends *diameter* to wheel:
 
 {% highlight ruby %}
 def gear_inches
@@ -139,7 +140,7 @@ def gear_inches
 end
 {% endhighlight %}
 
-The above method now depends on <span class="other-font">Gear</span> responding to <span class="other-font">wheel</span> and on <span class="other-font">wheel</span> responding to *diameter*. You can reduce your chance of being forced to make a change to *gear_inches* by removing the external dependency and encapsulating it in a method of its own, as in the example below:
+The above method now depends on <span class="other-font">Gear</span> responding to *wheel* and on *wheel* responding to *diameter*. You can reduce your chance of being forced to make a change to *gear_inches* by removing the external dependency and encapsulating it in a method of its own, as in the example below:
 
 {% highlight ruby %}
 def gear_inches
@@ -155,7 +156,7 @@ end
 
 #### Remove Argument-Order Dependencies ###
 
-In the example below, <span class="other-font">Gear's</span> *initialize* method takes three arguments: *chainring*, *cog*, and <span class="other-font">wheel</span>. It provides no defaults; each of these arguments is required. When a new instance of <span class="other-font">Gear</span> is created, the three arguments must be passed and they must be passed in the exact order.
+In the example below, <span class="other-font">Gear's</span> *initialize* method takes three arguments: *chainring*, *cog*, and *wheel*. It provides no defaults; each of these arguments is required. When a new instance of <span class="other-font">Gear</span> is created, the three arguments must be passed and they must be passed in the exact order.
 
 {% highlight ruby %}
 class Gear
@@ -202,7 +203,7 @@ def initialize(args)
 end
 {% endhighlight %}
 
-In the example below, setting the defaults in this way means that callers can actually cause *@chainring* to get set to *false* or *nil*, something that is not possible when using the `` || ``      technique.
+In the example below, setting the defaults in this way means that callers can actually cause *@chainring* to get set to *false* or *nil*, something that is not possible when using the `` || `` technique.
 
 {% highlight ruby %}
 # specifying defaults using fetch
