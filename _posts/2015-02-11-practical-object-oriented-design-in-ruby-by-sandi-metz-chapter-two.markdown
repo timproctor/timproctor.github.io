@@ -28,10 +28,8 @@ methods in turn
 ### Some specific steps
 
 >  - Test your class and methods:
->    - If the simplest description you can devise uses the word "and", the class
-likely has more than one responsibility
->    - If it uses the word "or," then the class has more than one responsibility and
-      aren't even very related
+>    - If the simplest description you can devise uses the word "and", the class likely has more than one responsibility
+>    - If it uses the word "or," then the class has more than one responsibility and aren't even very related
 >  - Behavior is captured in methods and invoked by sending messages so always wrap
 instance variables in accessor methods instead of directly referring to variables
 
