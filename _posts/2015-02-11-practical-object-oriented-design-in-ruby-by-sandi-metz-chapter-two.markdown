@@ -62,6 +62,7 @@ class Gear
   end
 end
 {% endhighlight %}
+
 >  - Methods, like classes, should have a single responsibility
 
 Look at the diameters method of the class below
