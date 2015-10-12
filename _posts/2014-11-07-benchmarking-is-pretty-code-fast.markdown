@@ -38,7 +38,7 @@ end
 
 ![iteration_5]({{ site.url }}/assets/images/iteration_5.png)
 
-Average of the 4 real times (the last column of data) = 0.00805325 seconds
+Average of the 4 real times (the last column of data) **= 0.00805325 seconds**
 
 ### Testing Iteration 4: ###
 
@@ -68,7 +68,7 @@ end
 
 ![iteration_4]({{ site.url }}/assets/images/iteration_4.png)
 
-Average of the 4 real times (the last column of data) = 0.007983 seconds
+Average of the 4 real times (the last column of data ) **= 0.007983 seconds**
 
 ### Testing Iteration 1: ####
 
@@ -110,7 +110,7 @@ end
 
 ![iteration_1]({{ site.url }}/assets/images/iteration_1.png)
 
-Average of the 4 real times (the last column of data) = 0.0032615 seconds
+Average of the 4 real times (the last column of data)  **= 0.0032615 seconds**
 
 ### Testing Iteration 2: ###
 
@@ -185,7 +185,7 @@ end
 
 ![iteration_2]({{ site.url }}/assets/images/iteration_2.png)
 
-Average of the 4 real times (the last column of data) = 0.015414 seconds
+Average of the 4 real times (the last column of data ) **= 0.015414 seconds**
 
 ### Testing Iteration 6: ###
 
@@ -231,7 +231,7 @@ end
 
 ![iteration_6]({{ site.url }}/assets/images/iteration_6.png)
 
-Average of the 4 real times (the last column of data) = 0.01015875 seconds
+Average of the 4 real times (the last column of data)  **= 0.01015875 seconds**
 
 ### Testing Iteration 7: ##
 
@@ -265,7 +265,7 @@ end
 
 ![iteration_7]({{ site.url }}/assets/images/iteration_7.png)
 
-Average of the 4 real times (the last column of data) = 0.0182455 seconds
+Average of the 4 real times (the last column of data)  **= 0.0182455 seconds**
 
 ### Conclusions ###
 
