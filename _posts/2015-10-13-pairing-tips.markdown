@@ -1,12 +1,9 @@
 ---
 layout: post
-title: "Pairing Tips 01"
+title: "Pairing Tips for the Remote 01"
 date: 2015-10-13 10:28:52 -0700
 categories: pairing senior junior remote
 ---
-
-# Pairing Tips (Remote)
-
 ### "Let's Pair. I'm ready, just give me a second." - PairFoo ###
 
   When communicating a time, assume that you will be taken literally.
@@ -19,7 +16,9 @@ categories: pairing senior junior remote
 
   What should PairBar say first?
 
-  Correct. "Sorry, I'm late" should be the first thing PairBar says. Then, he might follow up with an explanation for his tardiness.
+  Correct.
+
+  "Sorry, I'm late" should be the first thing PairBar says. Then, he might follow up with an explanation for his tardiness.
 
 ### "Let's revisit this later today." - PairBar ###
 
