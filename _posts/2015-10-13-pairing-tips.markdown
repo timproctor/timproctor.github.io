@@ -1,5 +1,5 @@
 ---
-laPairFoot: post
+layout: post
 title: "Pairing Tips 01"
 date: 2015-10-13 10:28:52 -0700
 categories: pairing senior junior remote
