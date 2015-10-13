@@ -7,7 +7,7 @@ categories: pairing senior junior remote
 
 # Pairing Tips (Remote)
 
-### 1. "Let's Pair. I'm ready, just give me a second." - PairFoo ###
+### "Let's Pair. I'm ready, just give me a second." - PairFoo ###
 
   When communicating a time, assume that you will be taken literally.
 
@@ -15,13 +15,13 @@ categories: pairing senior junior remote
 
   Time is money and PairFoo is wasting it by being vague.
 
-### 2. Pairing was scheduled to start 5 minutes ago. PairBar has just logged in.
+### Pairing was scheduled to start 5 minutes ago. PairBar has just logged in.
 
   What should PairBar say first?
 
   Correct. "Sorry, I'm late" should be the first thing PairBar says. Then, he might follow up with an explanation for his tardiness.
 
-### 3. "Let's revisit this later today." - PairBar ###
+### "Let's revisit this later today." - PairBar ###
 
   What is wrong with these type of time references?
 
