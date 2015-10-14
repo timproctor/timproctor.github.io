@@ -8,7 +8,7 @@ categories: pairing senior junior remote
 
   When communicating a time, assume that you will be taken literally.
 
-  Unless, PairFoo really does start pairing in a second, the other person will naturally assume PairFoo meant a `minute` instead of a `second`. If the minute has elapsed, then two, then five, it is on PairFoo to make an new expectation as to when PairFoo plans to pair. Consider it a break in communication if 5 minutes have elapsed, the other pair is annoyed, and there is no agreed upon expectation as to when this pairing session is going to happen.
+  Unless, PairFoo really does start pairing in a second, the other person will naturally assume PairFoo meant a `minute` instead of a `second`. If the minute has elapsed, then two, then five, it is on PairFoo to make a new expectation as to when PairFoo plans to pair. Consider it a break in communication if 5 minutes have elapsed, now the other pair is annoyed, and there is no agreed upon expectation as to when this pairing session is going to happen.
 
   Time is money and PairFoo is wasting it by being vague.
 
